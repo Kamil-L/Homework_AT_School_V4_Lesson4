@@ -1,9 +1,9 @@
 package CarsManufacturing;
 
 public class Dimension {
-    public int high;
-    public int width;
-    public int trunkCapacity;
+    private final int high;
+    private final int width;
+    private final int trunkCapacity;
 
     public Dimension(int high, int width, int trunkCapacity) {
         this.high = high;

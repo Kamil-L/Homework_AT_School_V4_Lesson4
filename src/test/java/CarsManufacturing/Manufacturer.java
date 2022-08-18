@@ -1,11 +1,10 @@
 package CarsManufacturing;
 
 public class Manufacturer {
-    public String model;
-    public String type;
+    private final String model;
+    private final String type;
 
     public Manufacturer(String model, String type) {
-
         this.model = model;
         this.type = type;
     }

@@ -1,12 +1,10 @@
 package CarsManufacturing;
 
-import CarsManufacturing.Country;
-
 import java.util.List;
 
 public class Market {
-    public String name;
-    public List<Country> countries;
+    private final String name;
+    private final List<Country> countries;
 
     public Market(String name, List<Country> countries) {
         this.name = name;
