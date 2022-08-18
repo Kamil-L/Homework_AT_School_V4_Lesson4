@@ -12,7 +12,6 @@ public class Car {
     private final String segment;
     private final ArrayList<Dimension> dimensions;
 
-
     public Car(Manufacturer manufacturer, boolean isAutomaticGear, Market market, Segment segment,
                ArrayList<Dimension> dimensions) {
         this.manufacturer = manufacturer;
@@ -36,11 +35,15 @@ public class Car {
 
     public ArrayList<Dimension> getDimensions() {
         return dimensions;
-
     }
 
     public static void printCarsData(List<Car> cars) {
-        for (Object car : cars) System.out.println(car);
+        if (cars.isEmpty()) {
+            System.out.println("\nThere is no any filtered data");
+        }
+        for (Object car : cars) {
+            System.out.println(car);
+        }
     }
 
     @Override
@@ -59,5 +62,4 @@ public class Car {
                 .filter(isTrunkCapRequired)
                 .collect(Collectors.toList());
     }
-
 }
